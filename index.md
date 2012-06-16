@@ -22,7 +22,7 @@ The first thing you need to read about NVelocity is not even on this web site. Y
 
 To use NVelocity View Engine inform the type on the customEngine on the configuration file:
 
-```
+```xml
 <viewEngine
     viewPathRoot="views"
     customEngine="Castle.MonoRail.Framework.Views.<b class="searchkeyword">NVelocity</b>.<b class="searchkeyword">NVelocity</b>ViewEngine, Castle.MonoRail.Framework.Views.<b class="searchkeyword">NVelocity</b>" />
@@ -34,7 +34,7 @@ NVelocity uses the extension .vm so just create your views with that extension. 
 ###Layouts
 Use the $childContent context variable to render the content of the view on the layout template. The following is a simple layout using NVelocity:
 
-```
+```html
 <html>
  Welcome
 $childContent
@@ -51,7 +51,7 @@ The NVelocity View Engine looks for a file nvelocity.properties in the root of t
 
 For example, to configure NVelocity to support Chinese encoding create a text file named nvelocity.properties, save it to your views folder and add the following content:
 
-```
+```text
 input.encoding=GB2312
 output.encoding=GB2312
 ```
@@ -66,7 +66,7 @@ All .vm files in this folder will be loaded as a NVelocity Macro library so the 
 ##Fancy foreach Loops
 Inspired on FrogCreek's fancy loops. The following code should be self-explanatory:
 
-```
+```text
 #foreach($i in $items)
 #each (this is optional since it's the default section)
        text which appears for each item
@@ -93,7 +93,7 @@ Inspired on FrogCreek's fancy loops. The following code should be self-explanato
 
 All sections are optional, and they can appear in any order multiple times (sections with same name will have their content appended). So for example you can use it to create table contents with alternating styles:
 
-```
+```html
 #foreach($person in $people)
 #beforeall
        <table>
@@ -128,7 +128,7 @@ All sections are optional, and they can appear in any order multiple times (sect
 
 Which will output something like:
 
-```
+```html
 <table>
        <tr>
        <th>Name</th>
