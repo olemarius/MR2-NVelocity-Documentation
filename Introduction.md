@@ -1,27 +1,28 @@
 #User Guide - Contents
 
-* ####[About this Guide]
+
+* ####About this Guide
 	* What is Velocity?
-* ####[What can Velocity do for me?]
+* ####What can Velocity do for me?
 	* The Mud Store example
-* ####[What jar should I use?]
+* ####What jar should I use?
 	* Maven users
 	* Other users
-* ####[Velocity Template Language (VTL): An Introduction]
-* ####[Hello Velocity World!]
-* ####[Comments]
-* ####[References]
+* ####Velocity Template Language (VTL): An Introduction
+* ####Hello Velocity World!
+* ####Comments
+* ####References
 	* Variables
 	* Properties
 	* Methods
 	* Property Lookup Rules
 	* Rendering
 	* Index Notation
-* ####[Formal Reference Notation]
-* ####[Quiet Reference Notation]
-* ####[Strict Reference Mode]
-* ####[Case Substitution]
-* ####[Directives]
+* ####Formal Reference Notation
+* ####Quiet Reference Notation
+* ####Strict Reference Mode
+* ####Case Substitution
+* ####Directives
 	* Set
 	* Literals
 	* If-Else Statements
@@ -34,19 +35,19 @@
 	* Evaluate
 	* Define
 	* Velocimacros
-* ####[Getting literal]
+* ####Getting literal
 	* Currency
 	* Escaping Valid VTL References
 	* Escaping Invalid VTL References
 	* Escaping VTL Directives
-* ####[VTL: Formatting Issues]
-* ####[Other Features and Miscellany]
+* ####VTL: Formatting Issues
+* ####Other Features and Miscellany
 	* Math
 	* Range Operator
 	* Advanced Issues: Escaping and !
 	* Velocimacro Miscellany
 	* String Concatenation
-* ####[Feedback
+* ####Feedback
 
 About this Guide
 
