@@ -1,13 +1,17 @@
 ##User Guide - Contents
 
+The original source of this user guide can be found at http://velocity.apache.org/engine/devel/user-guide.html
 
 * ####[About this Guide](#aboutthisguide)
 	* What is Velocity?
+
 * ####What can Velocity do for me?
 	* The Mud Store example
+
 * ####What jar should I use?
 	* Maven users
 	* Other users
+
 * ####Velocity Template Language (VTL): An Introduction
 * ####Hello Velocity World!
 * ####Comments
@@ -18,6 +22,7 @@
 	* Property Lookup Rules
 	* Rendering
 	* Index Notation
+
 * ####Formal Reference Notation
 * ####Quiet Reference Notation
 * ####Strict Reference Mode
@@ -35,11 +40,13 @@
 	* Evaluate
 	* Define
 	* Velocimacros
+
 * ####Getting literal
 	* Currency
 	* Escaping Valid VTL References
 	* Escaping Invalid VTL References
 	* Escaping VTL Directives
+
 * ####VTL: Formatting Issues
 * ####Other Features and Miscellany
 	* Math
@@ -47,6 +54,7 @@
 	* Advanced Issues: Escaping and !
 	* Velocimacro Miscellany
 	* String Concatenation
+
 * ####Feedback
 
 ## <a href="#aboutthisguide">About this Guide</a>
