@@ -1,7 +1,7 @@
-#User Guide - Contents
+##User Guide - Contents
 
 
-* ####About this Guide
+* ####[About this Guide](#aboutthisguide)
 	* What is Velocity?
 * ####What can Velocity do for me?
 	* The Mud Store example
@@ -49,7 +49,7 @@
 	* String Concatenation
 * ####Feedback
 
-About this Guide
+## <a href="#aboutthisguide">About this Guide</a>
 
 The Velocity User Guide is intended to help page designers and content providers get acquainted with Velocity and the syntax of its simple yet powerful scripting language, the Velocity Template Language (VTL). Many of the examples in this guide deal with using Velocity to embed dynamic content in web sites, but all VTL examples are equally applicable to other pages and templates.
 
