@@ -2,14 +2,14 @@
 
 Pros:
 
-    Limited set of functions forces you to code only view logic (good for separation of concerns)
-    Easy to learn template language
-    Same syntax as Velocity (for Java), allowing view reuse among different platforms
-    Reuse skills for people with Java experience
+- Limited set of functions forces you to code only view logic (good for separation of concerns)
+- Easy to learn template language
+- Same syntax as Velocity (for Java), allowing view reuse among different platforms
+- Reuse skills for people with Java experience
 
 Cons:
-    Interpreted
-    Community seem very inactive. That forced Castle Project to fork NVelocity and work on improvements and bug fixes.
+- Interpreted
+- Community seem very inactive. That forced Castle Project to fork NVelocity and work on improvements and bug fixes.
 
 
 The NVelocity View Engine uses NVelocity.
