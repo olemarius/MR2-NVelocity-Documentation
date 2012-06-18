@@ -18,7 +18,7 @@ NVelocity is a port of the excellent Apache Jakarta Velocity project. It is a ve
 
 The first thing you need to read about NVelocity is not even on this web site. You can find on the original Velocity web site:
 
-    The user guide
+[The user guide](http://velocity.apache.org/engine/devel/user-guide.html)
 
 To use NVelocity View Engine inform the type on the customEngine on the configuration file:
 
