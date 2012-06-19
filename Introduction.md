@@ -62,8 +62,6 @@ The original source of this user guide can be found at http://velocity.apache.or
 	* [Velocimacro Miscellany](#velocitymacro-miscellany)
 	* [String Concatenation](#string-concatenation)
 
-* ####[Feedback](#feedback)
-
 ## <a name="about-this-guide">About this Guide</a>
 
 The Velocity User Guide is intended to help page designers and content providers get acquainted with Velocity and the syntax of its simple yet powerful scripting language, the Velocity Template Language (VTL). Many of the examples in this guide deal with using Velocity to embed dynamic content in web sites, but all VTL examples are equally applicable to other pages and templates.
@@ -93,15 +91,15 @@ You could embed the following VTL statement in the web page:
 <body>
 Hello $customer.Name!
 <table>
-\#foreach( $mud in $mudsOnSpecial )
-   \#if ( $customer.hasPurchased($mud) )
+#foreach( $mud in $mudsOnSpecial )
+   #if ( $customer.hasPurchased($mud) )
       <tr>
         <td>
           $flogger.getPromo( $mud )
         </td>
       </tr>
-   \#end
-\#end
+   #end
+#end
 </table>
 ```
 
@@ -299,7 +297,7 @@ $purchase.Total
 
 Take the first example, $customer.Address. It can have two meanings. It can mean, Look in the hashtable identified as customer and return the value associated with the key Address. But $customer.Address can also be referring to a method (references that refer to methods will be discussed in the next section); $customer.Address could be an abbreviated way of writing $customer.getAddress(). When your page is requested, Velocity will determine which of these two possibilities makes sense, and then return the appropriate value.
 
-##Methods
+##<a name="methods">Methods</a>
 A method is defined in the Java code and is capable of doing something useful, like running a calculation or arriving at a decision. Methods are references that consist of a leading "$" character followed a VTL Identifier, followed by a VTL Method Body. A VTL Method Body consists of a VTL Identifier followed by an left parenthesis character ("("), followed by an optional parameter list, followed by right parenthesis character (")"). These are examples of valid method references in the VTL:
 
 ```text
@@ -338,11 +336,8 @@ As of Velocity 1.6, all array references are now "magically" treated as if they 
 
 ```text
 $myarray.isEmpty()
-
 $myarray.size()
-
 $myarray.get(2)
-
 $myarray.set(1, 'test')
 ```
 
@@ -361,25 +356,25 @@ Property Lookup Rules
 As was mentioned earlier, properties often refer to methods of the parent object. Velocity is quite clever when figuring out which method corresponds to a requested property. It tries out different alternatives based on several established naming conventions. The exact lookup sequence depends on whether or not the property name starts with an upper-case letter. For lower-case names, such as $customer.address, the sequence is
 
 ```text
-    getaddress()
-    getAddress()
-    get("address")
-    isAddress()
+getaddress()
+getAddress()
+get("address")
+isAddress()
 ```
 
 For upper-case property names like $customer.Address, it is slightly different:
 
 ```text
-    getAddress()
-    getaddress()
-    get("Address")
-    isAddress()
+getAddress()
+getaddress()
+get("Address")
+isAddress()
 ```
 
-###Rendering
+###<a name="rendering">Rendering</a>
 The final value resulting from each and every reference (whether variable, property, or method) is converted to a String object when it is rendered into the final output. If there is an object that represents $foo (such as an Integer object), then Velocity will call its .toString() method to resolve the object into a String.
 
-###Index Notation
+###<a name="index-notation">Index Notation</a>
 Using the notation of the form $foo[0] can be used to access a given index of an object. This form is synonymous with calling the get(Object) method on a given object i.e, $foo.get(0), and provides essentially a syntactic shorthand for such operations. Since this simply calls the get method all of the following are valid uses:
 
 ```text
@@ -408,7 +403,7 @@ A reference can also be set using index notation, for example:
 
 The specified element is set with the given value. Velocity tries first the 'set' method on the element, then 'put' to make the assignment.
 
-###Formal Reference Notation
+###<a name="formal-reference-notation">Formal Reference Notation</a>
 Shorthand notation for references was used for the examples listed above, but there is also a formal notation for references, which is demonstrated below:
 
 ```text
@@ -429,7 +424,7 @@ There is ambiguity here, and Velocity assumes that $vicemaniac, not $vice, is th
 
 Now Velocity knows that $vice, not $vicemaniac, is the reference. Formal notation is often useful when references are directly adjacent to text in a template.
 
-Quiet Reference Notation
+###<a name="quiet-reference-notation">Quiet Reference Notation</a>
 When Velocity encounters an undefined reference, its normal behavior is to output the image of the reference. For example, suppose the following reference appears as part of a VTL template.
 
 ```html
@@ -450,7 +445,7 @@ Formal and quiet reference notation can be used together, as demonstrated below.
 <input type="text" name="email" value="$!{email}"/>
 ```
 
-##Strict Reference Mode
+##<a name="strict-reference-mode">Strict Reference Mode</a>
 
 Velocity 1.6 introduces the concept of strict reference mode which is activated by setting the velocity configuration property 'runtime.references.strict' to true. The general intent of this setting is to make Velocity behave more strictly in cases that are undefined or ambiguous, similar to a programming language, which may be more appropriate for some uses of Velocity. In such undefined or ambiguous cases Velocity will throw an exception. The following discussion outlines the cases in which strict behavior is different from traditional behavior.
 
@@ -493,7 +488,7 @@ this is $!foo   ## renders to "this is " without an exception
 this is $!bogus ## bogus is not in the context so throws an exception
 ```
 
-##Case Substitution
+##<a name="case-substitution">Case Substitution</a>
 
 Now that you are familiar with references, you can begin to apply them effectively in your templates. Velocity references take advantage of some Java principles that template designers will find easy to use. For example:
 
@@ -520,7 +515,8 @@ These examples illustrate alternative uses for the same references. Velocity tak
 Velocity, which is modelled on the Bean specifications defined by Sun Microsystems, is case sensitive; however, its developers have strove to catch and correct user errors wherever possible. When the method getFoo() is referred to in a template by $bar.foo, Velocity will first try $getfoo. If this fails, it will then try $getFoo. Similarly, when a template refers to $bar.Foo, Velocity will try $getFoo() first and then try getfoo().
 
 Note: References to instance variables in a template are not resolved. Only references to the attribute equivalents of JavaBean getter/setter methods are resolved (i.e. $foo.Name does resolve to the class Foo's getName() instance method, but not to a public Name instance variable of Foo).
-Directives
+
+##<a name="directives">Directives</a>
 
 References allow template designers to generate dynamic content for web sites, while directives -- easy to use script elements that can be used to creatively manipulate the output of Java code -- permit web designers to truly take charge of the appearance and content of the web site.
 
@@ -536,7 +532,8 @@ In such a case, use the brackets to separate #else from the rest of the line.
 #if($a==1)true enough#{else}no way!#end
 ```
 
-###\#set
+
+###<a name="set">\#set</a>
 
 The #set directive is used for setting the value of a reference. A value can be assigned to either a variable reference or a property reference, and this occurs in brackets, as demonstrated:
 
@@ -686,7 +683,7 @@ Renders as:
 #end
 ```
 
-##Conditionals
+##<a name="if-else-statements">Conditionals</a>
 ###If / ElseIf / Else
 
 The #if directive in Velocity allows for text to be included when the web page is generated, on the conditional that the if statement is true. For example:
@@ -699,17 +696,17 @@ The #if directive in Velocity allows for text to be included when the web page i
 
 The variable $foo is evaluated to determine whether it is true, which will happen under one of three circumstances:
 
-    $foo is a boolean (true/false) which has a true value
-    $foo is a string or a collection which is not null and not empty
-    $foo is an object (other than a string or a collection) which is not null
+- ```$foo``` is a boolean (true/false) which has a true value
+- ```$foo``` is a string or a collection which is not null and not empty
+- ```$foo``` is an object (other than a string or a collection) which is not null
 
 Remember that the Velocity context only contains Objects, so when we say 'boolean', it will be represented as a Boolean (the class). This is true even for methods that return boolean - the introspection infrastructure will return a Boolean of the same logical value.
 
-The content between the #if and the #end statements become the output if the evaluation is true. In this case, if $foo is true, the output will be: "Velocity!". Conversely, if $foo has a null value, or if it is a boolean false, the statement evaluates as false, and there is no output.
+The content between the ```#if``` and the ```#end``` statements become the output if the evaluation is true. In this case, if $foo is true, the output will be: "Velocity!". Conversely, if $foo has a null value, or if it is a boolean false, the statement evaluates as false, and there is no output.
 
-An #elseif or #else element can be used with an #if element. Note that the Velocity Templating Engine will stop at the first expression that is found to be true. In the following example, suppose that $foo has a value of 15 and $bar has a value of 6.
+An ```#elseif``` or ```#else``` element can be used with an ```#if``` element. Note that the Velocity Templating Engine will stop at the first expression that is found to be true. In the following example, suppose that ```$foo``` has a value of 15 and ```$bar``` has a value of 6.
 
-```
+```html
 #if( $foo < 10 )
     <strong>Go North</strong>
 #elseif( $foo == 10 )
@@ -721,13 +718,13 @@ An #elseif or #else element can be used with an #if element. Note that the Veloc
 #end
 ```
 
-In this example, $foo is greater than 10, so the first two comparisons fail. Next $bar is compared to 6, which is true, so the output is Go South.
+In this example, $foo is greater than 10, so the first two comparisons fail. Next ```$bar``` is compared to 6, which is true, so the output is Go South.
 
-###Relational and Logical Operators
+###<a name="relational-and-logical-operators">Relational and Logical Operators</a>
 
 Velocity uses the equivalent operator to determine the relationships between variables. Here is a simple example to illustrate how the equivalent operator is used.
 
-```
+```text
 #set ($foo = "deoxyribonucleic acid")
 #set ($bar = "ribonucleic acid")
 
@@ -742,7 +739,7 @@ Note that the semantics of == are slightly different than Java where == can only
 
 Velocity has logical AND, OR and NOT operators as well. Below are examples demonstrating the use of the logical AND, OR and NOT operators.
 
-```
+```html
 ## logical AND
 
 #if( $foo && $bar )
@@ -754,18 +751,18 @@ The #if() directive will only evaluate to true if both $foo and $bar are true. I
 
 Logical OR operators work the same way, except only one of the references need evaluate to true in order for the entire expression to be considered true. Consider the following example.
 
-```
+```html
 ## logical OR
 
 #if( $foo || $bar )
     <strong>This OR That</strong>
 #end
 ```
-If $foo is true, the Velocity Templating Engine has no need to look at $bar; whether $bar is true or false, the expression will be true, and This OR That will be output. If $foo is false, however, $bar must be checked. In this case, if $bar is also false, the expression evaluates to false and there is no output. On the other hand, if $bar is true, then the entire expression is true, and the output is This OR That
+If ```$foo``` is true, the Velocity Templating Engine has no need to look at ```$bar```; whether ```$bar``` is true or false, the expression will be true, and This OR That will be output. If ```$foo``` is false, however, $bar must be checked. In this case, if $bar is also false, the expression evaluates to false and there is no output. On the other hand, if $bar is true, then the entire expression is true, and the output is This OR That
 
 With logical NOT operators, there is only one argument :
 
-```
+```html
 ##logical NOT
 
 #if( !$foo )
@@ -773,22 +770,22 @@ With logical NOT operators, there is only one argument :
 #end
 ```
 
-Here, the if $foo is true, then !$foo evaluates to false, and there is no output. If $foo is false, then !$foo evaluates to true and NOT that will be output. Be careful not to confuse this with the quiet reference $!foo which is something altogether different.
+Here, the if ```$foo``` is true, then ```!$foo``` evaluates to false, and there is no output. If ```$foo``` is false, then ```!$foo``` evaluates to true and NOT that will be output. Be careful not to confuse this with the quiet reference ```$!foo``` which is something altogether different.
 
-There are text versions of all logical operators, including eq, ne, and, or, not, gt, ge, lt, and le.
+There are text versions of all logical operators, including ```eq```, ```ne```, ```and```, ```or```, ```not```, ```gt```, ```ge```, ```lt```, and ```le```.
 
-One more useful note. When you wish to include text immediately following a #else directive you will need to use curly brackets immediately surrounding the directive to differentiate it from the following text. (Any directive can be delimited by curly brackets, although this is most useful for #else).
+One more useful note. When you wish to include text immediately following a ```#else``` directive you will need to use curly brackets immediately surrounding the directive to differentiate it from the following text. (Any directive can be delimited by curly brackets, although this is most useful for ```#else```).
 
 ```
 #if( $foo == $bar)it's true!#{else}it's not!#end</li>
 ```
 
-##Loops
-###Foreach Loop
+##<a name="loops">Loops</a>
+###<a name="foreach">Foreach Loop</a>
 
 The #foreach element allows for looping. For example:
 
-```
+```html
 <ul>
 #foreach( $product in $allProducts )
     <li>$product</li>
@@ -847,7 +844,7 @@ If you want to stop looping in a foreach from within your template, you can now 
 #end
 ```
 
-##Include
+##<a name="include">Include</a>
 
 The #include script element allows the template designer to import a local file, which is then inserted into the location where the #include directive is defined. The contents of the file are not rendered through the template engine. For security reasons, the file to be included may only be under TEMPLATE_ROOT.
 
@@ -861,7 +858,7 @@ The file being included need not be referenced by name; in fact, it is often pre
 
 #include( "greetings.txt", $seasonalstock )
 
-##Parse
+##<a name="parse">Parse</a>
 
 The #parse script element allows the template designer to import a local file that contains VTL. Velocity will parse the VTL and render the template specified.
 
@@ -915,7 +912,7 @@ The example below will display abc.
 #evaluate($dynamicsource)
 ```
 
-##Define
+##<a name="define">Define</a>
 
 The #define directive lets one assign a block of VTL to a reference.
 
@@ -927,7 +924,7 @@ The example below will display Hello World!.
 $block
 ```
 
-##Velocimacros
+##<a name="velocitymacros">Velocimacros</a>
 
 The #macro script element allows template designers to define a repeated segment of a VTL template. Velocimacros are very useful in a wide range of scenarios both simple and complex. This Velocimacro, created for the sole purpose of saving keystrokes and minimizing typographic errors, provides an introduction to the concept of Velocimacros.
 
@@ -961,7 +958,7 @@ You can still call the macro as you did before, and since we used the silent ref
 
 A Velocimacro can also take any number of arguments -- even zero arguments, as demonstrated in the first example, is an option -- but when the Velocimacro is invoked, it must be called with the same number of arguments with which it was defined. Many Velocimacros are more involved than the one defined above. Here is a Velocimacro that takes two arguments, a color and an array.
 
-```
+```html
 #macro( tablerows $color $somelist )
 #foreach( $something in $somelist )
     <tr><td bgcolor=$color>$something</td></tr>
@@ -997,7 +994,7 @@ Velocimacros can be defined inline in a Velocity template, meaning that it is un
 
 Were the #tablerows($color $list) Velocimacro defined in a Velocimacros template library, this macro could be used on any of the regular templates. It could be used many times and for many different purposes. In the template mushroom.vm devoted to all things fungi, the #tablerows Velocimacro could be invoked to list the parts of a typical mushroom:
 
-```
+```html
 #set( $parts = ["volva","stipe","annulus","gills","pileus"] )
 #set( $cellbgcol = "#CC00FF" )
 <table>
@@ -1007,7 +1004,7 @@ Were the #tablerows($color $list) Velocimacro defined in a Velocimacros template
 
 When fulfilling a request for mushroom.vm, Velocity would find the #tablerows Velocimacro in the template library (defined in the velocity.properties file) and generate the following output:
 
-```
+```html
 <table>
     <tr><td bgcolor="#CC00FF">volva</td></tr>
     <tr><td bgcolor="#CC00FF">stipe</td></tr>
@@ -1017,7 +1014,7 @@ When fulfilling a request for mushroom.vm, Velocity would find the #tablerows Ve
 </table>
 ```
 
-###Velocimacro Arguments
+###<a name="velocitymacro-arguments">Velocimacro Arguments</a>
 
 Velocimacros can take as arguments any of the following VTL elements :
 
@@ -1046,31 +1043,31 @@ At first glance, this feature appears surprising, but when you take into conside
 If you need to circumvent this feature, you can always just get the value from the method as a new reference and pass that :
 
 ```
-     #set( $myval = $foo.bar() )
-     #callme( $myval )
+#set( $myval = $foo.bar() )
+#callme( $myval )
 ```
 
-###Velocimacro Properties
+###<a name="velocitymacro-properties">Velocimacro Properties</a>
 
 Several lines in the velocity.properties file allow for flexible implementation of Velocimacros. Note that these are also documented in the Developer Guide.
 
-velocimacro.library - A comma-separated list of all Velocimacro template libraries. By default, Velocity looks for a single library: VM_global_library.vm. The configured template path is used to find the Velocimacro libraries.
+```velocimacro.library``` - A comma-separated list of all Velocimacro template libraries. By default, Velocity looks for a single library: VM_global_library.vm. The configured template path is used to find the Velocimacro libraries.
 
-velocimacro.permissions.allow.inline - This property, which has possible values of true or false, determines whether Velocimacros can be defined in regular templates. The default, true, allows template designers to define Velocimacros in the templates themselves.
+```velocimacro.permissions.allow.inline``` - This property, which has possible values of true or false, determines whether Velocimacros can be defined in regular templates. The default, true, allows template designers to define Velocimacros in the templates themselves.
 
-velocimacro.permissions.allow.inline.to.replace.global - With possible values of true or false, this property allows the user to specify if a Velocimacro defined inline in a template can replace a globally defined template, one that was loaded on startup via the velocimacro.library property. The default, false, prevents Velocimacros defined inline in a template from replacing those defined in the template libraries loaded at startup.
+```velocimacro.permissions.allow.inline.to.replace.global``` - With possible values of true or false, this property allows the user to specify if a Velocimacro defined inline in a template can replace a globally defined template, one that was loaded on startup via the velocimacro.library property. The default, false, prevents Velocimacros defined inline in a template from replacing those defined in the template libraries loaded at startup.
 
-velocimacro.permissions.allow.inline.local.scope - This property, with possible values of true or false, defaulting to false, controls if Velocimacros defined inline are 'visible' only to the defining template. In other words, with this property set to true, a template can define inline VMs that are usable only by the defining template. You can use this for fancy VM tricks - if a global VM calls another global VM, with inline scope, a template can define a private implementation of the second VM that will be called by the first VM when invoked by that template. All other templates are unaffected.
+```velocimacro.permissions.allow.inline.local.scope``` - This property, with possible values of true or false, defaulting to false, controls if Velocimacros defined inline are 'visible' only to the defining template. In other words, with this property set to true, a template can define inline VMs that are usable only by the defining template. You can use this for fancy VM tricks - if a global VM calls another global VM, with inline scope, a template can define a private implementation of the second VM that will be called by the first VM when invoked by that template. All other templates are unaffected.
 
-velocimacro.library.autoreload - This property controls Velocimacro library autoloading. The default value is false. When set to true the source Velocimacro library for an invoked Velocimacro will be checked for changes, and reloaded if necessary. This allows you to change and test Velocimacro libraries without having to restart your application or servlet container, just like you can with regular templates. This mode only works when caching is off in the resource loaders (e.g. file.resource.loader.cache = false ). This feature is intended for development, not for production.
+```velocimacro.library.autoreload``` - This property controls Velocimacro library autoloading. The default value is false. When set to true the source Velocimacro library for an invoked Velocimacro will be checked for changes, and reloaded if necessary. This allows you to change and test Velocimacro libraries without having to restart your application or servlet container, just like you can with regular templates. This mode only works when caching is off in the resource loaders (e.g. file.resource.loader.cache = false ). This feature is intended for development, not for production.
 Getting literal
 
-VTL uses special characters, such as $ and #, to do its work, so some added care should be taken where using these characters in your templates. This section deals with escaping these characters.
+VTL uses special characters, such as ```$``` and ```#```, to do its work, so some added care should be taken where using these characters in your templates. This section deals with escaping these characters.
 
-Currency
+###<a name="currency">Currency</a>
 There is no problem writing "I bought a 4 lb. sack of potatoes at the farmer's market for only $2.50!" As mentioned, a VTL identifier always begins with an upper- or lowercase letter, so $2.50 would not be mistaken for a reference.
 
-Escaping Valid VTL References
+###<a name="escaping-valid-vtl-references">Escaping Valid VTL References</a>
 Cases may arise where you do not want to have a reference rendered by Velocity. Escaping special characters is the best way to output VTL's special characters in these situations, and this can be done using the backslash ( \ ) character when those special characters are part of a valid VTL reference. *
 
 ```
@@ -1138,7 +1135,7 @@ $moon = $foo
 
 The output will be: $moon = gibbous -- where $moon is output as a literal because it is undefined and gibbous is output in place of $foo.
 
-Escaping Invalid VTL References
+###<a name="escaping-invalid-vtl-references">Escaping Invalid VTL References</a>
 Sometimes Velocity has trouble parsing your template when it encounters an "invalid reference" that you never intended to be a reference at all. Escaping special characters is, again, the best way to handle these situations, but in these situations, the backslash will likely fail you. Instead of simply trying to escape the problematic $ or #, you should probably just replace this:
 
 ```
@@ -1160,7 +1157,7 @@ ${esc.d}{my:invalid:non:reference}
 
 Escaping of both valid and invalid VTL directives is handled in much the same manner; this is described in more detail in the Directives section.
 
-Escaping VTL Directives
+###<a name="escaping-vtl-directives">Escaping VTL Directives</a>
 VTL directives can be escaped with the backslash character ("\") in a manner similar to valid VTL references.
 
 ```
@@ -1191,24 +1188,24 @@ Vyacheslav Ganelin
 If $jazz is false, there is no output. Escaping script elements alters the output. Consider the following case:
 
 ```
-\#if( $jazz )
+#if( $jazz )
     Vyacheslav Ganelin
-\#end
+#end
 ```
 
 This causes the directives to be escaped, but the rendering of $jazz proceeds as normal. So, if $jazz is true, the output is
 
 ```
- #if( true )
-     Vyacheslav Ganelin
- #end
+\#if( true )
+	Vyacheslav Ganelin
+\#end
 ```
 
 Suppose backslashes precede script elements that are legitimately escaped:
 
 ```
 \\#if( $jazz )
-   Vyacheslav Ganelin
+	Vyacheslav Ganelin
 \\#end
 ```
 
@@ -1236,7 +1233,8 @@ Note that things start to break if script elements are not properly escaped.
 ```
 
 Here the #if is escaped, but there is an #end remaining; having too many endings will cause a parsing error.
-VTL: Formatting Issues
+
+##<a name="vtl-formatting-issues">VTL: Formatting Issues</a>
 
 Although VTL in this user guide is often displayed with newlines and whitespaces, the VTL shown below
 
@@ -1275,8 +1273,8 @@ Send me
 
 In each case the output will be the same.
 
-##Other Features and Miscellany
-###Math
+##<a name="other-features-and-miscellany">Other Features and Miscellany</a>
+###<a name="math">Math</a>
 
 Velocity has a handful of built-in mathematical functions that can be used in templates with the set directive. The following equations are examples of addition, subtraction, multiplication and division, respectively:
 
@@ -1293,7 +1291,7 @@ When a division operation is performed between two integers, the result will be 
 #set( $foo = $bar % 5 )
 ```
 
-###Range Operator
+###<a name="range-operator">Range Operator</a>
 
 The range operator can be used in conjunction with #set and #foreach statements. Useful for its ability to produce an object array containing integers, the range operator has the following construction:
 
@@ -1382,14 +1380,14 @@ $!{foo}
 \bar
 ```
 
-Velocimacro Miscellany
+###<a name="velocitymacro-miscellany">Velocimacro Miscellany</a>
 
 This section is a mini-FAQ on topics relating to Velocimacros. This section will change over time, so it's worth checking for new information from time to time.
 
 Note : Throughout this section, 'Velocimacro' will commonly be abbreviated as 'VM'.
 Can I use a directive or another VM as an argument to a VM?
 
-Example : #center( #bold("hello") )
+Example : ```#center( #bold("hello") )```
 
 No. A directive isn't a valid argument to a directive, and for most practical purposes, a VM is a directive.
 
@@ -1432,7 +1430,7 @@ because the evaluation of the "#inner($bar)" happens inside #outer(), so the $ba
 
 This is an intentional and jealously guarded feature - args are passed 'by name' into VMs, so you can hand VMs things like stateful references such as
 
-```
+```html
 #macro( foo $color )
   <tr bgcolor=$color><td>Hi</td></tr>
   <tr bgcolor=$color><td>There</td></tr>
@@ -1470,13 +1468,15 @@ which defaults to false. When set to true along with
 Here is what a simple set of configuration properties would look like.
 
 ```
-    file.resource.loader.path = templates
-    file.resource.loader.cache = false
-    velocimacro.library.autoreload = true
+file.resource.loader.path = templates
+file.resource.loader.cache = false
+velocimacro.library.autoreload = true
 ```    
 
 Don't keep this on in production.
-String Concatenation
+
+
+###<a name="string-concatination">String Concatenation</a>
 
 A common question that developers ask is How do I do String concatenation? Is there any analogue to the '+' operator in Java?.
 
