@@ -1467,17 +1467,21 @@ What is Velocimacro Autoreloading?
 
 There is a property, meant to be used in development, not production :
 
-```velocimacro.library.autoreload```
+```text
+velocimacro.library.autoreload
+```
 
 which defaults to false. When set to true along with
 
-```<type>.resource.loader.cache = false```
+```text
+<type>.resource.loader.cache = false
+```
 
 (where <type> is the name of the resource loader that you are using, such as 'file') then the Velocity engine will automatically reload changes to your Velocimacro library files when you make them, so you do not have to dump the servlet engine (or application) or do other tricks to have your Velocimacros reloaded.
 
 Here is what a simple set of configuration properties would look like.
 
-```
+```text
 file.resource.loader.path = templates
 file.resource.loader.cache = false
 velocimacro.library.autoreload = true
@@ -1494,33 +1498,33 @@ To do concatenation of references in VTL, you just have to 'put them together'. 
 
 In the regular 'schmoo' of a template (when you are mixing it in with regular content) :
 
-```
-       #set( $size = "Big" )
-       #set( $name = "Ben" )
+```text
+#set( $size = "Big" )
+#set( $name = "Ben" )
 
-      The clock is $size$name.
+The clock is $size$name.
 ```
 
 and the output will render as 'The clock is BigBen'. For more interesting cases, such as when you want to concatenate strings to pass to a method, or to set a new reference, just do
 
-```
-      #set( $size = "Big" )
-      #set( $name = "Ben" )
+```text
+#set( $size = "Big" )
+#set( $name = "Ben" )
 
-      #set($clock = "$size$name" )
+#set($clock = "$size$name" )
 
-      The clock is $clock.
+The clock is $clock.
 ``` 
 
 Which will result in the same output. As a final example, when you want to mix in 'static' strings with your references, you may need to use 'formal references' :
 
-```
-      #set( $size = "Big" )
-      #set( $name = "Ben" )
+```text
+#set( $size = "Big" )
+#set( $name = "Ben" )
 
-      #set($clock = "${size}Tall$name" )
+#set($clock = "${size}Tall$name" )
 
-      The clock is $clock.
+The clock is $clock.
  ```   
 
 Now the output is 'The clock is BigTallBen'. The formal notation is needed so the parser knows you mean to use the reference '$size' versus '$sizeTall' which it would if the '{}' weren't there.
