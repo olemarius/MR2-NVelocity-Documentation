@@ -297,7 +297,7 @@ $purchase.Total
 
 Take the first example, $customer.Address. It can have two meanings. It can mean, Look in the hashtable identified as customer and return the value associated with the key Address. But $customer.Address can also be referring to a method (references that refer to methods will be discussed in the next section); $customer.Address could be an abbreviated way of writing $customer.getAddress(). When your page is requested, Velocity will determine which of these two possibilities makes sense, and then return the appropriate value.
 
-##<a name="methods">Methods</a>
+###<a name="methods">Methods</a>
 A method is defined in the Java code and is capable of doing something useful, like running a calculation or arriving at a decision. Methods are references that consist of a leading "$" character followed a VTL Identifier, followed by a VTL Method Body. A VTL Method Body consists of a VTL Identifier followed by an left parenthesis character ("("), followed by an optional parameter list, followed by right parenthesis character (")"). These are examples of valid method references in the VTL:
 
 ```text
@@ -352,7 +352,7 @@ $sun.setPlanets()
 ## Will just pass in an empty, zero-length array
 ```
 
-Property Lookup Rules
+###<a name="property-lookup-rules">Property Lookup Rules</a>
 As was mentioned earlier, properties often refer to methods of the parent object. Velocity is quite clever when figuring out which method corresponds to a requested property. It tries out different alternatives based on several established naming conventions. The exact lookup sequence depends on whether or not the property name starts with an upper-case letter. For lower-case names, such as $customer.address, the sequence is
 
 ```text
@@ -632,7 +632,8 @@ One solution to this would be to pre-set $result to false. Then if the $query.cr
 ```
 
 Unlike some of the other Velocity directives, the #set directive does not have an #end statement.
-Literals
+
+##<a name="literals">Literals</a>
 
 When using the #set directive, string literals that are enclosed in double quote characters will be parsed and rendered, as shown:
 
@@ -720,7 +721,7 @@ An ```#elseif``` or ```#else``` element can be used with an ```#if``` element. N
 
 In this example, $foo is greater than 10, so the first two comparisons fail. Next ```$bar``` is compared to 6, which is true, so the output is Go South.
 
-###<a name="relational-and-logical-operators">Relational and Logical Operators</a>
+####<a name="relational-and-logical-operators">Relational and Logical Operators</a>
 
 Velocity uses the equivalent operator to determine the relationships between variables. Here is a simple example to illustrate how the equivalent operator is used.
 
@@ -781,7 +782,7 @@ One more useful note. When you wish to include text immediately following a ```#
 ```
 
 ##<a name="loops">Loops</a>
-###<a name="foreach">Foreach Loop</a>
+###<a name="foreach-loops">Foreach Loop</a>
 
 The #foreach element allows for looping. For example:
 
@@ -799,7 +800,7 @@ The contents of the $allProducts variable is a Vector, a Hashtable or an Array. 
 
 Lets say that $allProducts is a Hashtable. If you wanted to retrieve the key values for the Hashtable as well as the objects within the Hashtable, you can use code like this:
 
-```
+```html
 <ul>
 #foreach( $key in $allProducts.keySet() )
     <li>Key: $key -> Value: $allProducts.get($key)</li>
@@ -809,7 +810,7 @@ Lets say that $allProducts is a Hashtable. If you wanted to retrieve the key val
 
 Velocity provides an easy way to get the loop counter so that you can do something like the following:
 
-```
+```html
 <table>
 #foreach( $customer in $customerList )
     <tr><td>$foreach.count</td><td>$customer.Name</td></tr>
@@ -819,15 +820,17 @@ Velocity provides an easy way to get the loop counter so that you can do somethi
 
 Velocity also now provides an easy way to tell if you are on the last iteration of a loop:
 
+```
 #foreach( $customer in $customerList )
     $customer.Name#if( $foreach.hasNext ),#end
 #end
+```
 
 If you want a zero-based index of the #foreach loop, you can just use $foreach.index instead of $foreach.count. Likewise, $foreach.first and $foreach.last are provided to compliment $foreach.hasNext. If you want to access these properties for an outer #foreach loop, you can reference them directly through the $foreach.parent or $foreach.topmost properties (e.g. $foreach.parent.index or $foreach.topmost.hasNext).
 
 It's possible to set a maximum allowed number of times that a loop may be executed. By default there is no max (indicated by a value of 0 or less), but this can be set to an arbitrary number in the velocity.properties file. This is useful as a fail-safe.
 
-```
+```text
 # The maximum allowed number of loops.
 directive.foreach.maxloops = -1
 ```
@@ -848,17 +851,24 @@ If you want to stop looping in a foreach from within your template, you can now 
 
 The #include script element allows the template designer to import a local file, which is then inserted into the location where the #include directive is defined. The contents of the file are not rendered through the template engine. For security reasons, the file to be included may only be under TEMPLATE_ROOT.
 
+```
 #include( "one.txt" )
+```
 
 The file to which the #include directive refers is enclosed in quotes. If more than one file will be included, they should be separated by commas.
 
+```
 #include( "one.gif","two.txt","three.htm" )
+```
 
 The file being included need not be referenced by name; in fact, it is often preferable to use a variable instead of a filename. This could be useful for targeting output according to criteria determined when the page request is submitted. Here is an example showing both a filename and a variable.
 
+```
 #include( "greetings.txt", $seasonalstock )
-
+```
+```
 ##<a name="parse">Parse</a>
+```
 
 The #parse script element allows the template designer to import a local file that contains VTL. Velocity will parse the VTL and render the template specified.
 
@@ -928,7 +938,7 @@ $block
 
 The #macro script element allows template designers to define a repeated segment of a VTL template. Velocimacros are very useful in a wide range of scenarios both simple and complex. This Velocimacro, created for the sole purpose of saving keystrokes and minimizing typographic errors, provides an introduction to the concept of Velocimacros.
 
-```
+```html
 #macro( d )
 <tr><td></td></tr>
 #end
@@ -942,7 +952,7 @@ The Velocimacro being defined in this example is d, and it can be called in a ma
 
 When this template is called, Velocity would replace #d() with a row containing a single, empty data cell. If we want to put something in that cell, we can alter the macro to allow for a body:
 
-```
+```html
 #macro( d )
 <tr><td>$!bodyContent</td></tr>
 #end
@@ -970,7 +980,7 @@ The Velocimacro being defined in this example, tablerows, takes two arguments. T
 
 Anything that can be put into a VTL template can go into the body of a Velocimacro. The tablerows Velocimacro is a foreach statement. There are two #end statements in the definition of the #tablerows Velocimacro; the first belongs to the #foreach, the second ends the Velocimacro definition.
 
-```
+```html
 #set( $greatlakes = ["Superior","Michigan","Huron","Erie","Ontario"] )
 #set( $color = "blue" )
 <table>
@@ -980,7 +990,7 @@ Anything that can be put into a VTL template can go into the body of a Velocimac
 
 Notice that $greatlakes takes the place of $somelist. When the #tablerows Velocimacro is called in this situation, the following output is generated:
 
-```
+```html
 <table>
     <tr><td bgcolor="blue">Superior</td></tr>
     <tr><td bgcolor="blue">Michigan</td></tr>
