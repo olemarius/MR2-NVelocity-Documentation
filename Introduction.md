@@ -2,19 +2,19 @@
 
 The original source of this user guide can be found at http://velocity.apache.org/engine/devel/user-guide.html
 
-* ####[About this Guide](#aboutthisguide)
-	* [What is Velocity?](#whatisvelocity)
+* ####[About this Guide](#about-this-guide)
+	* [What is Velocity?](#what-is-velocity)
 
-* ####[What can Velocity do for me?](#whatcanvelocitydoforme)
-	* [The Mud Store example](themudstoreexample)
+* ####[What can Velocity do for me?](#what-can-velocity-do-for-me)
+	* [The Mud Store Example](#the-mud-store-example)
 
-* ####[What jar should I use?](#whatjarshouldiuse)
-	* [Maven users]()
-	* [Other users]()
+* ####[What jar should I use?](#what-jar-should-i-use)
+	* [Maven users](#maven-users)
+	* [Other users](#other-users)
 
-* ####[Velocity Template Language (VTL): An Introduction]()
+* ####[Velocity Template Language (VTL): An Introduction](#velocity-template-language-vtl-an-introduction)
 
-* ####[Hello Velocity World!](#hellovelocityworld)
+* ####[Hello Velocity World!](#hello-velocity-world)
 
 * ####[Comments](#comments)
 
@@ -22,24 +22,24 @@ The original source of this user guide can be found at http://velocity.apache.or
 	* [Variables](#variables)
 	* [Properties](#properties)
 	* [Methods](#methods)
-	* [Property Lookup Rules](#propertylookuprules)
+	* [Property Lookup Rules](#property-lookup-rules)
 	* [Rendering](#rendering)
-	* [Index Notation](#indexnotation)
+	* [Index Notation](#index-notation)
 
-* ####[Formal Reference Notation](#formalreferencenotation)
+* ####[Formal Reference Notation](#formal-reference-notation)
 
-* ####[Quiet Reference Notation](#quietreferencenotation)
+* ####[Quiet Reference Notation](#quiet-reference-notation)
 
-* ####[Strict Reference Mode](#stringreferencemode)
+* ####[Strict Reference Mode](#string-reference-mode)
 
-* ####[Case Substitution](#casesubstitution)
+* ####[Case Substitution](#case-substitution)
 
 * ####[Directives](#directives)
 	* [Set](#set)
 	* [Literals](#literals)
-	* [If-Else Statements](#ifelsestatements)
-	  * [Relational and Logical Operators](relationalandlogicaloperators)
-	* [Foreach Loops](#foreachloops)
+	* [If-Else Statements](#if-else-statements)
+	  * [Relational and Logical Operators](#relational-and-logical-operators)
+	* [Foreach Loops](#foreach-loops)
 	* [Include](#include)
 	* [Parse](#parse)
 	* [Break](#break)
@@ -48,35 +48,37 @@ The original source of this user guide can be found at http://velocity.apache.or
 	* [Define](#define)
 	* [Velocimacros](#velocimacros)
 
-* ####[Getting literal](#gettingliteral)
+* ####[Getting literal](#getting-literal)
 	* [Currency](#currency)
-	* [Escaping Valid VTL References](#escapingvalidvtlreferences)
-	* [Escaping Invalid VTL References](#escapinginvalidvtlreferences)
-	* [Escaping VTL Directives](#escapingvtldirectives)
+	* [Escaping Valid VTL References](#escaping-valid-vtl-references)
+	* [Escaping Invalid VTL References](#escaping-invalid-vtl-references)
+	* [Escaping VTL Directives](#escaping-vtl-directives)
 
-* ####[VTL: Formatting Issues](#vtlformattingissues)
-* ####[Other Features and Miscellany](#otherfeaturesandmiscellany)
+* ####[VTL: Formatting Issues](#vtl-formatting-issues)
+* ####[Other Features and Miscellany](#other-features-and-miscellany)
 	* [Math](#math)
-	* [Range Operator](#rangeoperator)
-	* [Advanced Issues: Escaping and !](#advancedissuesescapingand!)
-	* [Velocimacro Miscellany](#velocitymacromiscellany)
-	* [String Concatenation](#stringconcatenation)
+	* [Range Operator](#range-operator)
+	* [Advanced Issues: Escaping and !](#advanced-issues-escaping-and-!)
+	* [Velocimacro Miscellany](#velocitymacro-miscellany)
+	* [String Concatenation](#string-concatenation)
 
 * ####[Feedback](#feedback)
 
-## <a name="aboutthisguide">About this Guide</a>
+## <a name="about-this-guide">About this Guide</a>
 
 The Velocity User Guide is intended to help page designers and content providers get acquainted with Velocity and the syntax of its simple yet powerful scripting language, the Velocity Template Language (VTL). Many of the examples in this guide deal with using Velocity to embed dynamic content in web sites, but all VTL examples are equally applicable to other pages and templates.
 
 Thanks for choosing Velocity!
 
-##<a name="whatisvelocity">What is Velocity?</a>
+###<a name="what-is-velocity">What is Velocity?</a>
 
 Velocity is a Java-based template engine. It permits web page designers to reference methods defined in Java code. Web designers can work in parallel with Java programmers to develop web sites according to the Model-View-Controller (MVC) model, meaning that web page designers can focus solely on creating a well-designed site, and programmers can focus solely on writing top-notch code. Velocity separates Java code from the web pages, making the web site more maintainable over the long run and providing a viable alternative to Java Server Pages (JSPs) or PHP.
 
 Velocity can be used to generate web pages, SQL, PostScript and other output from templates. It can be used either as a standalone utility for generating source code and reports, or as an integrated component of other systems. When complete, Velocity will provide template services for the Turbine web application framework. Velocity+Turbine will provide a template service that will allow web applications to be developed according to a true MVC model.
-What can Velocity do for me?
-The Mud Store Example
+
+##<a name="what-can-velocity-do-for-me">What can Velocity do for me?</a>
+
+###<a name="the-mud-store-example">The Mud Store Example</a>
 
 Suppose you are a page designer for an online store that specializes in selling mud. Let's call it "The Online Mud Store". Business is thriving. Customers place orders for various types and quantities of mud. They login to your site using their username and password, which allows them to view their orders and buy more mud. Right now, Terracotta Mud is on sale, which is very popular. A minority of your customers regularly buys Bright Red Mud, which is also on sale, though not as popular and usually relegated to the margin of your web page. Information about each customer is tracked in your database, so one day the question arises, Why not use Velocity to target special deals on mud to the customers who are most interested in those types of mud?
 
@@ -107,11 +109,11 @@ The exact details of the foreach statement will be described in greater depth sh
 
 Documented in the VTL Reference are the many other Velocity elements, which collectively give you the power and flexibility you need to make your web site a web presence. As you get more familiar with these elements, you will begin to unleash the power of Velocity.
 
-##<a name="whatjarshouldiuse">What jar should I use?</a>
+##<a name="what-jar-should-i-use">What jar should I use?</a>
 
 Velocity Engine 2.x distribution has several jars, related to the Maven artifacts that are published to the Maven repository.
 
-###<a name="mavenusers">Maven users</a>
+###<a name="maven-users">Maven users</a>
 
 Include the following dependency to your POM file:
 
@@ -152,7 +154,7 @@ If you want to connect Velocity log facility to Commons Logging, SLF4J, Log4j or
 ´´´
     
 
-###<a name="otherusers">Other users</a>
+###<a name="other-users">Other users</a>
 
 First of all download Velocity Engine distribution.
 
@@ -169,7 +171,7 @@ The other jars are finely-grained jars that contain only what you might need.
 The extra jars you will always need always are Commons Collections and Commons Lang, included in "lib" directory.
 
 
-##<a name="velocitytemplatelanguagevtlanintroduction">Velocity Template Language (VTL): An Introduction</a>
+##<a name="velocity-template-language-vtl-an-introduction">Velocity Template Language (VTL): An Introduction</a>
 
 The Velocity Template Language (VTL) is meant to provide the easiest, simplest, and cleanest way to incorporate dynamic content in a web page. Even a web page developer with little or no programming experience should soon be capable of using VTL to incorporate dynamic content in a web site.
 
@@ -189,7 +191,7 @@ The following rule of thumb may be useful to better understand how Velocity work
 
 In the example above, #set is used to assign a value to a variable. The variable, $a, can then be used in the template to output "Velocity".
 
-##<a name="hellovelocityworld">Hello Velocity World!</a>
+##<a name="hello-velocity-world">Hello Velocity World!</a>
 
 Once a value has been assigned to a variable, you can reference the variable anywhere in your HTML document. In the following example, a value is assigned to $foo and later referenced.
 
@@ -212,7 +214,7 @@ To make statements containing VTL directives more readable, we encourage you to 
 Comments allows descriptive text to be included that is not placed into the output of the template engine. Comments are a useful way of reminding yourself and explaining to others what your VTL statements are doing, or any other purpose you find useful. Below is an example of a comment in VTL.
 
 ```
-\#\# This is a single line comment.
+## This is a single line comment.
 ```
 
 A single line comment begins with ## and finishes at the end of the line. If you're going to write a few lines of commentary, there's no need to have numerous single line comments. Multi-line comments, which begin with #* and end with *#, are available to handle this scenario.
@@ -232,13 +234,13 @@ Here is text outside the multi-line comment; it is visible.
 
 Here are a few examples to clarify how single line and multi-line comments work:
 
-This text is visible. ## This text is not.
-This text is visible.
-This text is visible. #* This text, as part of a multi-line
-comment, is not visible. This text is not visible; it is also
-part of the multi-line comment. This text still not
-visible. *# This text is outside the comment, so it is visible.
-## This text is not visible.
+	This text is visible. ## This text is not.
+	This text is visible.
+	This text is visible. #* This text, as part of a multi-line
+	comment, is not visible. This text is not visible; it is also
+	part of the multi-line comment. This text still not
+	visible. *# This text is outside the comment, so it is visible.
+	## This text is not visible.
 
 There is a third type of comment, the VTL comment block, which may be used to store any sort of extra information you want to track in the template (e.g. javadoc-style author and versioning information):
 
@@ -253,11 +255,12 @@ information:
 *#
 ```
 
-##References
+##<a name="references">References</a>
 
 There are three types of references in the VTL: variables, properties and methods. As a designer using the VTL, you and your engineers must come to an agreement on the specific names of references so you can use them correctly in your templates.
 
-###Variables
+###<a name="variables">Variables</a>
+
 The shorthand notation of a variable consists of a leading "$" character followed by a VTL Identifier. A VTL Identifier must start with an alphabetic character (a .. z or A .. Z). The rest of the characters are limited to the following types of characters:
 
 
@@ -285,7 +288,8 @@ When VTL references a variable, such as $foo, the variable can get its value fro
 
 The output will be the same for all instances of $foo that follow this directive.
 
-Properties
+###<a name="properties">Properties</a>
+
 The second flavor of VTL references are properties, and properties have a distinctive format. The shorthand notation consists of a leading $ character followed a VTL Identifier, followed by a dot character (".") and another VTL Identifier. These are examples of valid property references in the VTL:
 
 ```
