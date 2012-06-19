@@ -88,20 +88,20 @@ You meet with software engineers at your company, and everyone has agreed that $
 
 You could embed the following VTL statement in the web page:
 
-´´´
-<HTML>
-<BODY>
+´´´html
+<html>
+<body>
 Hello $customer.Name!
 <table>
-#foreach( $mud in $mudsOnSpecial )
-   #if ( $customer.hasPurchased($mud) )
+\#foreach( $mud in $mudsOnSpecial )
+   \#if ( $customer.hasPurchased($mud) )
       <tr>
         <td>
           $flogger.getPromo( $mud )
         </td>
       </tr>
-   #end
-#end
+   \#end
+\#end
 </table>
 ´´´
 
@@ -117,7 +117,7 @@ Velocity Engine 2.x distribution has several jars, related to the Maven artifact
 
 Include the following dependency to your POM file:
 
-´´´
+´´´xml
 <dependency>
   <groupId>org.apache.velocity</groupId>
   <artifactId>velocity-engine-core</artifactId>
@@ -127,7 +127,7 @@ Include the following dependency to your POM file:
 
 If you want to connect Velocity log facility to Commons Logging, SLF4J, Log4j or the servlet logger, choose the appropriate dependency:
 
-´´´
+´´´xml
 <dependency>
   <groupId>org.apache.velocity</groupId>
   <artifactId>velocity-engine-commons-logging</artifactId>
@@ -162,11 +162,11 @@ If you want to jumpstart your application, simply include velocity-x.x.x.jar in 
 
 The other jars are finely-grained jars that contain only what you might need.
 
-    velocity-engine-core-x.x.x.jar: The main Velocity library. It must be included at all times.
-    velocity-engine-commons-logging-x.x.x.jar: It contains the binding to Commons Logging, so all log messages will be directed to it. To be used in conjunction with Commons Logging (included in "lib" directory).
-    velocity-engine-slf4j-x.x.x.jar: It contains the binding to SLF4J, so all log messages will be directed to it. To be used in conjunction with SLF4J (included in "lib" directory).
-    velocity-engine-log4j-x.x.x.jar: It contains the binding to Log4j, so all log messages will be directed to it. To be used in conjunction with Log4j (included in "lib" directory).
-    velocity-engine-servlet-x.x.x.jar: It contains the binding to the servlet logger. To be used in a servlet container.
+- velocity-engine-core-x.x.x.jar: The main Velocity library. It must be included at all times.
+- velocity-engine-commons-logging-x.x.x.jar: It contains the binding to Commons Logging, so all log messages will be directed to it. To be used in conjunction with Commons Logging (included in "lib" directory).
+- velocity-engine-slf4j-x.x.x.jar: It contains the binding to SLF4J, so all log messages will be directed to it. To be used in conjunction with SLF4J (included in "lib" directory).
+- velocity-engine-log4j-x.x.x.jar: It contains the binding to Log4j, so all log messages will be directed to it. To be used in conjunction with Log4j (included in "lib" directory).
+- velocity-engine-servlet-x.x.x.jar: It contains the binding to the servlet logger. To be used in a servlet container.
 
 The extra jars you will always need always are Commons Collections and Commons Lang, included in "lib" directory.
 
@@ -177,7 +177,7 @@ The Velocity Template Language (VTL) is meant to provide the easiest, simplest, 
 
 VTL uses references to embed dynamic content in a web site, and a variable is one type of reference. Variables are one type of reference that can refer to something defined in the Java code, or it can get its value from a VTL statement in the web page itself. Here is an example of a VTL statement that could be embedded in an HTML document:
 
-```
+```text
 #set( $a = "Velocity" )
 ```
 
@@ -195,7 +195,7 @@ In the example above, #set is used to assign a value to a variable. The variable
 
 Once a value has been assigned to a variable, you can reference the variable anywhere in your HTML document. In the following example, a value is assigned to $foo and later referenced.
 
-```
+```html
 <html>
 <body>
 #set( $foo = "Velocity" )
@@ -213,7 +213,7 @@ To make statements containing VTL directives more readable, we encourage you to 
 
 Comments allows descriptive text to be included that is not placed into the output of the template engine. Comments are a useful way of reminding yourself and explaining to others what your VTL statements are doing, or any other purpose you find useful. Below is an example of a comment in VTL.
 
-```
+```text
 ## This is a single line comment.
 ```
 
@@ -222,7 +222,7 @@ A single line comment begins with ## and finishes at the end of the line. If you
 This is text that is outside the multi-line comment.
 Online visitors can see it.
 
-```
+```text
 #*
  Thus begins a multi-line comment. Online visitors won't
  see this text because the Velocity Templating Engine will
@@ -244,7 +244,7 @@ Here are a few examples to clarify how single line and multi-line comments work:
 
 There is a third type of comment, the VTL comment block, which may be used to store any sort of extra information you want to track in the template (e.g. javadoc-style author and versioning information):
 
-```
+```text
 #**
 This is a VTL comment block and
 may be used to store such information
@@ -264,15 +264,15 @@ There are three types of references in the VTL: variables, properties and method
 The shorthand notation of a variable consists of a leading "$" character followed by a VTL Identifier. A VTL Identifier must start with an alphabetic character (a .. z or A .. Z). The rest of the characters are limited to the following types of characters:
 
 
-    alphabetic (a .. z, A .. Z)
-    numeric (0 .. 9)
-    hyphen ("-")
-    underscore ("_")
+- alphabetic (a .. z, A .. Z)
+- numeric (0 .. 9)
+- hyphen ("-")
+- underscore ("_")
 
 
 Here are some examples of valid variable references in the VTL:
 
-```
+```text
 $foo
 $mudSlinger
 $mud-slinger
@@ -282,7 +282,7 @@ $mudSlinger1
 
 When VTL references a variable, such as $foo, the variable can get its value from either a set directive in the template, or from the Java code. For example, if the Java variable $foo has the value bar at the time the template is requested, bar replaces all instances of $foo on the web page. Alternatively, if I include the statement
 
-```
+```text
 #set( $foo = "bar" )
 ```
 
@@ -292,7 +292,7 @@ The output will be the same for all instances of $foo that follow this directive
 
 The second flavor of VTL references are properties, and properties have a distinctive format. The shorthand notation consists of a leading $ character followed a VTL Identifier, followed by a dot character (".") and another VTL Identifier. These are examples of valid property references in the VTL:
 
-```
+```text
 $customer.Address
 $purchase.Total
 ```
@@ -302,7 +302,7 @@ Take the first example, $customer.Address. It can have two meanings. It can mean
 ##Methods
 A method is defined in the Java code and is capable of doing something useful, like running a calculation or arriving at a decision. Methods are references that consist of a leading "$" character followed a VTL Identifier, followed by a VTL Method Body. A VTL Method Body consists of a VTL Identifier followed by an left parenthesis character ("("), followed by an optional parameter list, followed by right parenthesis character (")"). These are examples of valid method references in the VTL:
 
-```
+```text
 $customer.getAddress()
 $purchase.getTotal()
 $page.setTitle( "My Home Page" )
@@ -315,7 +315,7 @@ VTL Properties can be used as a shorthand notation for VTL Methods. The Property
 
 The shorthand notation can be used for the following Methods
 
-```
+```text
 $sun.getPlanets()
 $annelid.getDirt()
 $album.getPhoto()
@@ -323,7 +323,7 @@ $album.getPhoto()
 
 We might expect these methods to return the names of planets belonging to the sun, feed our earthworm, or get a photograph from an album. Only the long notation works for the following Methods.
 
-```
+```text
 $sun.getPlanet( ["Earth", "Mars", "Neptune"] )
 ## Can't pass a parameter list with $sun.Planets
 
@@ -336,7 +336,7 @@ $book.setTitle( "Homage to Catalonia" )
 
 As of Velocity 1.6, all array references are now "magically" treated as if they are fixed-length lists. This means that you can call java.util.List methods on array references. So, if you have a reference to an array (let's say this one is a String[] with three values), you can do:
 
-```
+```text
 $myarray.isEmpty()
 
 $myarray.size()
@@ -348,7 +348,7 @@ $myarray.set(1, 'test')
 
 Also new in Velocity 1.6 is support for vararg methods. A method like public void setPlanets(String... planets) or even just public void setPlanets(String[] planets) (if you are using a pre-Java 5 JDK), can now accept any number of arguments when called in a template.
 
-```
+```text
 $sun.setPlanets('Earth', 'Mars', 'Neptune')
 
 $sun.setPlanets('Mercury')
@@ -360,7 +360,7 @@ $sun.setPlanets()
 Property Lookup Rules
 As was mentioned earlier, properties often refer to methods of the parent object. Velocity is quite clever when figuring out which method corresponds to a requested property. It tries out different alternatives based on several established naming conventions. The exact lookup sequence depends on whether or not the property name starts with an upper-case letter. For lower-case names, such as $customer.address, the sequence is
 
-```
+```text
     getaddress()
     getAddress()
     get("address")
@@ -369,7 +369,7 @@ As was mentioned earlier, properties often refer to methods of the parent object
 
 For upper-case property names like $customer.Address, it is slightly different:
 
-```
+```text
     getAddress()
     getaddress()
     get("Address")
@@ -382,7 +382,7 @@ The final value resulting from each and every reference (whether variable, prope
 ###Index Notation
 Using the notation of the form $foo[0] can be used to access a given index of an object. This form is synonymous with calling the get(Object) method on a given object i.e, $foo.get(0), and provides essentially a syntactic shorthand for such operations. Since this simply calls the get method all of the following are valid uses:
 
-```
+```text
 $foo[0]       ## $foo takes in an Integer look up
 $foo[$i]      ## Using another reference as the index
 $foo["bar"]   ## Passing a string where $foo may be a Map
@@ -392,7 +392,7 @@ The bracketed syntax also works with Java arrays since Velocity wraps arrays in 
 
 The bracketed syntax is valid anywhere .get is valid, for example:
 
-```
+```text
 $foo.bar[1].junk
 $foo.callMethod()[1]
 $foo["apple"][4]
@@ -400,7 +400,7 @@ $foo["apple"][4]
 
 A reference can also be set using index notation, for example:
 
-```
+```text
 #set($foo[0] = 1)
 #set($foo.bar[1] = 3)
 #set($map["apple"] = "orange")
@@ -411,7 +411,7 @@ The specified element is set with the given value. Velocity tries first the 'set
 ###Formal Reference Notation
 Shorthand notation for references was used for the examples listed above, but there is also a formal notation for references, which is demonstrated below:
 
-```
+```text
 ${mudSlinger}
 ${customer.Address}
 ${purchase.getTotal()}
@@ -421,24 +421,24 @@ In almost all cases you will use the shorthand notation for references, but in s
 
 Suppose you were constructing a sentence on the fly where $vice was to be used as the base word in the noun of a sentence. The goal is to allow someone to choose the base word and produce one of the two following results: "Jack is a pyromaniac." or "Jack is a kleptomaniac.". Using the shorthand notation would be inadequate for this task. Consider the following example:
 
-Jack is a $vicemaniac.
+```Jack is a $vicemaniac.```
 
 There is ambiguity here, and Velocity assumes that $vicemaniac, not $vice, is the Identifier that you mean to use. Finding no value for $vicemaniac, it will return $vicemaniac. Using formal notation can resolve this problem.
 
-Jack is a ${vice}maniac.
+```Jack is a ${vice}maniac.```
 
 Now Velocity knows that $vice, not $vicemaniac, is the reference. Formal notation is often useful when references are directly adjacent to text in a template.
 
 Quiet Reference Notation
 When Velocity encounters an undefined reference, its normal behavior is to output the image of the reference. For example, suppose the following reference appears as part of a VTL template.
 
-```
+```html
 <input type="text" name="email" value="$email"/>
 ```
 
 When the form initially loads, the variable reference $email has no value, but you prefer a blank text field to one with a value of "$email". Using the quiet reference notation circumvents Velocity's normal behavior; instead of using $email in the VTL you would use $!email. So the above example would look like the following:
 
-```
+```html
 <input type="text" name="email" value="$!email"/>
 ```
 
@@ -446,7 +446,9 @@ Now when the form is initially loaded and $email still has no value, an empty st
 
 Formal and quiet reference notation can be used together, as demonstrated below.
 
+```html
 <input type="text" name="email" value="$!{email}"/>
+```
 
 ##Strict Reference Mode
 
@@ -456,7 +458,7 @@ With this setting references are required to be either placed explicitly into th
 
 In the following examples $bar is defined but $foo is not, and all these statements will throw an exception:
 
-```
+```text
 $foo                         ## Exception
 #set($bar = $foo)            ## Exception
 #if($foo == $bar)#end        ## Exception
@@ -465,7 +467,7 @@ $foo                         ## Exception
 
 Also, The following statements show examples in which Velocity will throw an exception when attempting to call methods or properties that do not exist. In these examples $bar contains an object that defines a property 'foo' which returns a string, and 'retnull' which returns null.
 
-```
+```text
 $bar.bogus          ## $bar does not provide property bogus, Exception
 $bar.foo.bogus      ## $bar.foo does not provide property bogus, Exception
 $bar.retnull.bogus  ## cannot call a property on null, Exception
@@ -473,7 +475,7 @@ $bar.retnull.bogus  ## cannot call a property on null, Exception
 
 In general strict reference behavior is true for all situations in which references are used except for a special case within the #if directive. If a reference is used within a #if or #elseif directive without any methods or properties, and if it is not being compared to another value, then undefined references are allowed. This behavior provides an easy way to test if a reference is defined before using it in a template. In the following example where $foo is not defined the statements will not throw an exception.
 
-```
+```text
 #if ($foo)#end                  ## False
 #if ( ! $foo)#end               ## True
 #if ($foo && $foo.bar)#end      ## False and $foo.bar will not be evaluated
@@ -485,7 +487,7 @@ Strict mode requires that comparisons of >, <, >= or <= within an #if directive 
 
 References that Velocity attempts to render but evaluate to null will cause an Exception. To simply render nothing in this case the reference can be preceded by '$!' instead of '$', similar to non strict mode. Keep in mind this is different from the reference not existing in the context which will always throw an exception when attempting to render it in strict mode. For example, below $foo has a value of null in the context
 
-```
+```text
 this is $foo    ## throws an exception because $foo is null
 this is $!foo   ## renders to "this is " without an exception
 this is $!bogus ## bogus is not in the context so throws an exception
