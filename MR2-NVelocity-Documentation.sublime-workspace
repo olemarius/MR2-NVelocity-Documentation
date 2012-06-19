@@ -1,0 +1,1050 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hoer",
+				":hover"
+			],
+			[
+				"back",
+				"background	background-color: hex"
+			],
+			[
+				"a",
+				"a	<a href=\"mailto:\">"
+			],
+			[
+				"disp",
+				"display"
+			],
+			[
+				"link",
+				"link	link - stylesheet"
+			],
+			[
+				"verti",
+				"vertical-align"
+			],
+			[
+				"Arial",
+				"Arial, Helvetica, sans-serif"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/JSHint/JSHint.sublime-build",
+	"command_palette":
+	{
+		"height": 58.0,
+		"selected_items":
+		[
+			[
+				"packet install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"open gist",
+				"GitHub: Open Gist in Editor"
+			],
+			[
+				"github",
+				"GitHub: Update Gist"
+			],
+			[
+				"git",
+				"Gist: Create Public Gist"
+			],
+			[
+				"gi",
+				"Gist: Open Gist"
+			],
+			[
+				"create",
+				"Gist: Create Public Gist"
+			],
+			[
+				"create ",
+				"Gist: Create Private Gist"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"install packa",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Snippet: Wrap Selection in Open/Close Tag"
+			],
+			[
+				"todo",
+				"Todo: List All"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"packet",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Add Repository"
+			],
+			[
+				"",
+				"Set Syntax: HTML"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 424.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/email.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/input.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/formpage.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/textarea.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/selectmultiple.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/inputradio.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/inputcheckbox.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/number.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/url.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/select.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/form.vm",
+		"/C/Sites/Static/GoodEvening/css/style.css",
+		"/C/Users/Ole/AppData/Local/GitHub/TheLog.txt",
+		"/C/Sites/BlocAS/Chat/test.txt",
+		"/C/Sites/BlocAS/Chat/p0vw5aj0.sst.txt",
+		"/C/Program Files (x86)/OpenVPN/config/README.txt",
+		"/C/Users/Ole/AppData/Local/Temp/editorconfig.log",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Robots.txt",
+		"/C/Sites/Static/GoodEvening/js/nivo-slider/nivo-slider.css",
+		"/C/Sites/Static/GoodEvening/index.html",
+		"/C/METHLAB/Users/Public/AppLaunch/External Clients/GoodMorning/designbyrolf.com/assets/style.css",
+		"/C/METHLAB/Users/Public/AppLaunch/External Clients/GoodMorning/designbyrolf.com/index.html",
+		"//METHLAB/Users/Public/AppLaunch/External Clients/GoodMorning/GoodEvening/GoodEvening.sublime-workspace",
+		"/C/Sites/Mercurial/timer.txt",
+		"/C/Users/Ole/Desktop/Environment Setup.txt",
+		"/C/Users/Ole/Documents/præhæ.txt",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Static/elementTypes/addkey.vm",
+		"/C/Sites/Git/Bloc-Chat/README",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Sandbox/Forms.vm",
+		"/C/Sites/Mercurial/Hydra/Views/Shared/_Html5Boilerplate.cshtml",
+		"/C/Users/Ole/Documents/OpenVPN/Kent/kent.ovpn",
+		"/C/Users/Ole/Documents/OpenVPN/Joakim/joakim.ovpn",
+		"/C/Sites/Static/GoodEvening/js/jquery.aw-showcase/jquery.aw-showcase.js",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Scripts/libs/wysihtml5/src/commands/insertHTML.js",
+		"/C/Users/Ole/Desktop/html/sinners.html",
+		"/C/Sites/Static/GoodEvening/work.html",
+		"/C/Program Files (x86)/OpenVPN/config/client.ovpn",
+		"/C/Program Files (x86)/OpenVPN/sample-config/sample.ovpn",
+		"/C/Program Files (x86)/OpenVPN/sample-config/client.ovpn",
+		"/C/Sites/Static/GoodEvening/js/jquery.aw-showcase/index4.html",
+		"/C/Users/Ole/Downloads/digg-digg.5.2.7/digg-digg/digg-digg.php",
+		"/C/Sites/Git/html5-boilerplate/index.html",
+		"/C/Sites/aFarkas-html5shiv-3.5-10-g0329a90/aFarkas-html5shiv-0329a90/dist/html5shiv.js",
+		"/C/Sites/Static/GoodEvening/js/jquery.aw-showcase/css/style.css",
+		"/C/Program Files (x86)/OpenVPN/INSTALL-win32.txt",
+		"/C/Program Files (x86)/OpenVPN/easy-rsa/vars.bat",
+		"/C/Sites/Static/GoodEvening/GoodEvening.sublime-workspace",
+		"/C/Sites/Mercurial/Hydra/Content/css/page-nav.less",
+		"/C/Sites/Bloc/Frontend",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Content/css-templates/tables.chirp.less",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Content/css-templates/formatting.chirp.less",
+		"/C/Users/Ole/Downloads/__jquery.tablesorter/changelog",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Content/css-templates/google-buttons/style.less",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Shared/Main.Master",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Accounts/_userOptions.ascx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Accounts/_userListUserNetworks.ascx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Accounts/moderators.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Accounts/InfectedDevices.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Marketing/basedetails.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Marketing/baseoverview.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Marketing/overview.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Misc/GooglePlaces.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Plugin/AddNewModule.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Plugin/InstalledPlugins.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Plugin/Library.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Plugin/overview.aspx",
+		"/C/Users/Ole/Desktop/12WEEK-CHALLENGE.txt",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Accounts/_navNewUsers.ascx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Marketing/_navNewsletter.ascx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Views/Shared/Menu.ascx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Areas/DevAdmin/Views/Settings/SiteSettings.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Areas/DevAdmin/Views/User/Devadmin.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Areas/DevAdmin/Views/Settings/Templates.aspx",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/BlocCockpit/Areas/DevAdmin/Views/Sync/OverView.aspx",
+		"/C/Users/Ole/Downloads/google-buttons/demo.html",
+		"/C/Sites/Git/olemarius.github.com/source/_posts/2012-04-01-installing-octopress-got-ink.markdown",
+		"/C/Sites/Git/olemarius.github.com/source/_posts/2012-04-02-getting-down-n-dirty-with-octopress-plugin.markdown",
+		"/C/Sites/Git/olemarius.github.com/CNAME",
+		"/C/Sites/Git/olemarius.github.com/public/CNAME",
+		"/C/Sites/Git/olemarius.github.com/sass/custom/_styles.scss",
+		"/C/Sites/Git/olemarius.github.com/source/CNAME",
+		"/C/Sites/Git/olemarius.github.com/source/_posts/2012-04-05-best-cafes-to-work-from-in-beijing.markdown",
+		"/C/Sites/Git/olemarius.github.com/source/_posts/2012-04-05-whats-in-the-bag.markdown",
+		"/C/Sites/Git/olemarius.github.com/source/blog/archives/index.html",
+		"/C/Sites/Git/olemarius.github.com/plugins/backtick_code_block.rb",
+		"/C/Users/Ole/Desktop/bday.txt",
+		"/C/Users/Ole/Downloads/BSR Screen Recorder 5.2.6 Software + Serial Key/BSR Screen Recorder 5.2.6 Software + Serial Key/BSR Screen Recorder 5.2.6 Software/Serial.txt",
+		"/C/Users/Ole/AppData/Local/Temp/Rar$DI00.694/readme.txt",
+		"/C/NVIDIA/DisplayDriver/296.10/WinVista_Win7_64/International/Display.Driver/ListDevices.txt",
+		"/C/Sites/Git/olemarius.github.com/sass/custom/_layout.scss",
+		"/C/Sites/Git/olemarius.github.com/_config.yml",
+		"/C/Users/Ole/Desktop/todo.txt",
+		"/C/Users/Ole/Desktop/shopping.txt",
+		"/C/Users/Ole/Desktop/client in webconfig.txt",
+		"/C/Users/Ole/Desktop/mbp-cooling.txt",
+		"/C/Users/Ole/Desktop/changelog - december  12.txt",
+		"/C/Users/Ole/Desktop/test.txt",
+		"/C/Users/Ole/Desktop/Image Helper Resources.txt",
+		"/C/Users/Ole/Downloads/domready.js",
+		"/C/Users/Ole/Desktop/test.json",
+		"/C/ErrorExceptions/DACore/MSNRobot20120329.txt",
+		"/C/Sites/html5-boilerplate/humans.txt",
+		"/C/Users/Ole/AppData/Local/Temp/Rar$DI00.260/selectivizr.js",
+		"/C/Sites/Hydra 2/assets/js/jquery-placeholder.js",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Sandbox/Tables.vm",
+		"/C/Users/Ole/Desktop/Services in app config.txt",
+		"/C/Sites/html5-boilerplate/index.html",
+		"/C/Sites/Git/Bootstrap/less/dropdowns.less",
+		"/C/Sites/Git/Bootstrap/less/mixins.less",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Content/variables.less",
+		"/C/Users/Ole/Desktop/config/Services in app config.txt",
+		"/C/Users/Ole/Desktop/config/client in webconfig.txt",
+		"/C/Windows/System32/en-US/erofflps.txt",
+		"/C/Sites/Git/Bootstrap/less/tables.less",
+		"/C/Sites/Git/Bootstrap/less/variables.less",
+		"/C/Sites/Git/Bootstrap/lib/tables.less",
+		"/C/Sites/Git/Bootstrap/lib/mixins.less",
+		"/C/Sites/Hydra 2/index.html",
+		"/C/Sites/Hydra 2/assets/css/main.css",
+		"/C/Sites/Test-Project/README",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Competition/TrainingJournal/default.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Competition/ProfileActivityOverview.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/layouts/HTML5MasterPage.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Content/applaunch.chirp.less",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Photos/gallery.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Photos/gallery_photo.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Views/Photos/photo.vm",
+		"/C/Sites/Bloc/trunk/AppLaunch/Bloc/Frontend/Bloc.no/Content/css-templates/leftmenu.chirp.less"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Sites\\Git\\olemarius.github.com",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend\\Bloc.no",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend",
+			"<open files>",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend\\Bloc.no\\",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend\\Bloc.no\\,<open files>",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend\\Bloc.no\\",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend\\Bloc.no\\Controllers",
+			"C:\\Sites\\Bloc\\trunk\\AppLaunch\\Bloc\\Frontend\\Bloc.no",
+			"",
+			"phototag.js",
+			"<open files>",
+			"<open folders>",
+			"",
+			"C:\\Sites\\MonoRail\\MR2\\NVelocity",
+			"C:\\Sites\\MonoRail\\MR2\\NVelocity\\src\\NVelocity\\Context",
+			"C:\\Sites\\MonoRail\\MR2\\NVelocity\\src\\NVelocity",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"box-shadow",
+			"key-delete",
+			"form-editor",
+			"highlight",
+			"current-edit",
+			"edit-mode",
+			"form-highlight",
+			"edit-title-link",
+			"_deleteKey",
+			".wrap span",
+			"radio",
+			"checkbox",
+			"error",
+			"revert",
+			"selected=\"",
+			"inputUpdate",
+			"data-input-update",
+			"key-values",
+			"radio",
+			"type=\"check",
+			"values",
+			"radio-values",
+			"checkbox-preview",
+			"editor-item",
+			"form-highlight",
+			"radio-add",
+			"checkbox",
+			"radio-add",
+			"radio-delete",
+			"edit-preview-required-",
+			"checkbox-values",
+			"form-highlight",
+			"checkbox-preview",
+			"edit-preview",
+			"());",
+			"required",
+			"inputsomethingbefore_",
+			"InputValidateClass_",
+			"edit-form-input-",
+			"InputValidateClass_",
+			"validateAttr",
+			"edit-form-input-",
+			"inputcanceleditKey_",
+			"inputedit_",
+			"required",
+			"forminputeditkey_",
+			"key_",
+			"inputsomethingafter_",
+			"fieldset",
+			"inputedit_",
+			"connect",
+			"thumb_container",
+			"content_container",
+			"thumb",
+			"#grid-",
+			"wget",
+			"showcase-arrow-previous",
+			"width",
+			"showcase-arrow-previous",
+			"image-grid",
+			"header",
+			".showcase",
+			"#showcase",
+			"body {",
+			"header",
+			"clearfix",
+			"showcase-thumbnail-restriction",
+			"			",
+			"showcase-thumbnail-restriction",
+			"content_width",
+			"24",
+			"24px",
+			"showcase-arrow-next",
+			">",
+			"font",
+			"&",
+			"deprecated",
+			"dl.info",
+			"\">",
+			"backtick",
+			"cssamurai.com",
+			"Emoji",
+			"behavior for truncating long links",
+			"list-style:",
+			"backtick",
+			"gradient",
+			"background",
+			"@",
+			"crossdomain",
+			"width",
+			"boxed",
+			"baseLineHeight ",
+			"table",
+			".clear",
+			"/content/images/magnifying_glass.png",
+			"/scripts/facebox/loading.gif",
+			"messages",
+			"img",
+			"arrow",
+			"above",
+			"popover",
+			"Anette",
+			"chirp",
+			"\"$CommonHelps.GetRandomNumber(0, 1000000)\"",
+			"min",
+			"640",
+			"tinymce",
+			"widgetAdminButton",
+			"widgetAdmin",
+			"adminsett",
+			"widgetSettingsButton",
+			"widgetAdminButtonwidgetSettingsButton",
+			"CSS.Add",
+			":hover",
+			"viewmonth",
+			"fc-today",
+			"ui-widget-header",
+			"DeleteGroup",
+			"widgetAdminButton",
+			"topBarNav",
+			"network-toggle",
+			"distribue",
+			"Opprett lag for din bedrift",
+			"Inviter deltakere fra din bedrift",
+			"applaunch.view.activity.min.js",
+			"AppLaunch.View.Members.",
+			"AppLaunch.View.Activity.init(",
+			"AppLaunch.View.Activity"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/scripts/libs/jquery/facebox/loading.gif",
+			"$random",
+			"section-nav boxed",
+			";\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.57450523865,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"mixins",
+				"Bloc.no/Content/mixins.less"
+			],
+			[
+				"formatting",
+				"Content/css-templates/formatting.chirp.less"
+			],
+			[
+				"variables",
+				"Content/variables.less"
+			],
+			[
+				"variabe",
+				"Content/variables.less"
+			],
+			[
+				"tables.chirp",
+				"Content/css-templates/tables.chirp.less"
+			],
+			[
+				"traininjournal",
+				"Views/Competition/TrainingJournal/default.vm"
+			],
+			[
+				"competition/profileactivvm",
+				"Views/Competition/ProfileActivityOverview.vm"
+			],
+			[
+				"applaunch",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"tables",
+				"Content/css-templates/tables.chirp.less"
+			],
+			[
+				"reset.less",
+				"Content/reset.less"
+			],
+			[
+				"applaunch.less",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"photos/vm",
+				"Views/Photos/gallery.vm"
+			],
+			[
+				"photos/gallery",
+				"Views/Photos/gallery_photo.vm"
+			],
+			[
+				"views/photos/",
+				"Views/Photos/photo.vm"
+			],
+			[
+				"html5",
+				"Views/layouts/HTML5MasterPage.vm"
+			],
+			[
+				"commonhelps",
+				"Helpers/CommonHelps.cs"
+			],
+			[
+				"editreply",
+				"Views/Discussion/EditReply.vm"
+			],
+			[
+				"lastdiscussions",
+				"Views/Discussion/_lastDiscussions.vm"
+			],
+			[
+				"searchinforum",
+				"Views/Discussion/_SearchInForum.vm"
+			],
+			[
+				"discussion/inde",
+				"Views/Discussion/index.vm"
+			],
+			[
+				"head2",
+				"Views/components/Head2Component/default.vm"
+			],
+			[
+				"images.vm",
+				"Views/Sandbox/images.vm"
+			],
+			[
+				"saveform",
+				"Views/Static/saveformpageobject.vm"
+			],
+			[
+				"_listlast",
+				"Views/Members/_listLastMembers.vm"
+			],
+			[
+				"jquery-uiless",
+				"Content/_css/ui-default/jquery-ui-1.7.2.custom.less"
+			],
+			[
+				"grid.",
+				"Content/css-templates/grid.chirp.less"
+			],
+			[
+				"competition/upload",
+				"Views/Competition/UploadPhoto.vm"
+			],
+			[
+				"applaunch.chirp.less",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"_new/profile/",
+				"javascript/_new/profile/photos.js"
+			],
+			[
+				"network",
+				"Views/components/TopBarComponent/networks.vm"
+			],
+			[
+				"view.discuss",
+				"Content/css-view/view.discussion.less"
+			],
+			[
+				"home/index",
+				"Views/Home/index-columned.vm"
+			],
+			[
+				"home/index-",
+				"Views/Home/index-columned.vm"
+			],
+			[
+				"admin.less",
+				"Content/css-shared/admin.less"
+			],
+			[
+				"head2component",
+				"Views/components/Head2Component/default.vm"
+			],
+			[
+				"head2comp",
+				"Components/Head2Component.cs"
+			],
+			[
+				"mainmasterpage",
+				"Views/layouts/MainMasterPage.vm"
+			],
+			[
+				"headercomponent",
+				"Views/components/HeaderComponent/HeaderComponent.vm"
+			],
+			[
+				"topbarcomponent/network",
+				"Views/components/TopBarComponent/networks.vm"
+			],
+			[
+				"topbarcomponent/admin",
+				"Views/components/TopBarComponent/admin.vm"
+			],
+			[
+				"head",
+				"Components/Head2Component.cs"
+			],
+			[
+				"sitegallery/index",
+				"Views/SiteGallery/index.vm"
+			],
+			[
+				"activitychart",
+				"Views/Competition/TrainingJournal/activityChart.vm"
+			],
+			[
+				"profileactivityoverview",
+				"Views/Competition/ProfileActivityOverview.vm"
+			],
+			[
+				"b.chi",
+				"Scripts/b.chirp.js"
+			],
+			[
+				"applaunchless",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"calendarsummarystats",
+				"Views/Competition/TrainingJournal/calendarSummaryStats.vm"
+			],
+			[
+				"fullcalendar/fullcalendar.css",
+				"Scripts/fullcalendar-1.5.3/fullcalendar/fullcalendar.css"
+			],
+			[
+				"b.chirp.js",
+				"Scripts/b.chirp.js"
+			],
+			[
+				"applaunch.view.groups.",
+				"javascript/applaunch.view.groups.chirp.js"
+			],
+			[
+				"widgets3/competitionnewactivity.vm",
+				"Views/Widgets3/CompetitionNewActivity.vm"
+			],
+			[
+				"trainingjournal",
+				"Views/Competition/TrainingJournal/calendarSummaryStats.vm"
+			],
+			[
+				"profileactivity",
+				"Views/Competition/ProfileActivityOverview.vm"
+			],
+			[
+				"profile/profile",
+				"Views/Profile/profile.vm"
+			],
+			[
+				"views/admin/",
+				"Views/Admin/Widget/settings.vm"
+			],
+			[
+				"bmediablock",
+				"Components/BMediaBlock.cs"
+			],
+			[
+				"topbarcomponent",
+				"Views/components/TopBarComponent/networks.vm"
+			],
+			[
+				"topbarcomp",
+				"Views/components/TopBarComponent/default.vm"
+			],
+			[
+				"sandbox/new",
+				"Views/Widgets/Sandbox/new.vm"
+			],
+			[
+				"headercom",
+				"Views/components/HeaderComponent/default.vm"
+			],
+			[
+				"b.chir",
+				"Scripts/b.chirp.js"
+			],
+			[
+				"widgetcontroller",
+				"Controllers/Dev/WidgetController.cs"
+			],
+			[
+				"mainmaster",
+				"Views/layouts/MainMasterPage.vm"
+			],
+			[
+				"applaunch.chir",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"appla",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"css-templates/",
+				"Content/css-templates/dialogs.chirp.less"
+			],
+			[
+				"groups/create/defau",
+				"Views/Groups/Create/default.vm"
+			],
+			[
+				"groupscontroller",
+				"Controllers/GroupsController.cs"
+			],
+			[
+				"moderi",
+				"Scripts/modernizr.custom.27067.js"
+			],
+			[
+				"membersjs",
+				"javascript/applaunch.view.members.js"
+			],
+			[
+				"listlast",
+				"Views/Members/_listLastOnline.vm"
+			],
+			[
+				"lastonline",
+				"Views/Widgets1/LastOnline.vm"
+			],
+			[
+				"applaunch.view.activity",
+				"javascript/applaunch.view.activity.chirp.js"
+			],
+			[
+				"groupsmenu",
+				"Views/Groups/_groupMenu.vm"
+			],
+			[
+				"groups/group",
+				"Views/Groups/group.vm"
+			],
+			[
+				"b.chirp",
+				"Scripts/b.chirp.js"
+			],
+			[
+				"googlemaps",
+				"Views/Widgets/GoogleMapsPlace/default.vm"
+			],
+			[
+				"widgets/user",
+				"Views/Widgets1/UserImage.vm"
+			],
+			[
+				"facebox",
+				"javascript/facebox/facebox.js"
+			],
+			[
+				"toplistless",
+				"Content/css-widgets/CompetitionFriendsTopList.less"
+			],
+			[
+				"competitioncontroller",
+				"Controllers/CompetitionController.cs"
+			],
+			[
+				"friendtoplist",
+				"Content/css-widgets/CompetitionFriendsTopList.less"
+			],
+			[
+				"listmembers",
+				"Views/Members/_listLastMembers.vm"
+			],
+			[
+				"toplistby",
+				"Views/Competition/GroupsTopListWidget/TopListByTime.vm"
+			],
+			[
+				"competitionfriend",
+				"Views/Competition/FriendTopListWidget/default.vm"
+			],
+			[
+				"head2com",
+				"Views/components/Head2Component/default.vm"
+			],
+			[
+				"_listmembers",
+				"Views/Members/_listLastMembers.vm"
+			],
+			[
+				"_lastmembers",
+				"javascript/_new/members/lastmembers.js"
+			],
+			[
+				"admin.les",
+				"Content/css-shared/admin.less"
+			],
+			[
+				"/competition/toplistby",
+				"Views/Competition/GroupsTopListWidget/TopListByTime.vm"
+			],
+			[
+				"friendtop",
+				"Content/css-widgets/CompetitionFriendTopList.less"
+			],
+			[
+				"toplistbytime",
+				"Views/Competition/FriendTopListWidget/TopListByTime.vm"
+			],
+			[
+				"topbar.less",
+				"Content/css-shared/shared.topbar.less"
+			],
+			[
+				"shared.top",
+				"Content/css-shared/shared.topbar.less"
+			],
+			[
+				"applaunch.chirp",
+				"Content/applaunch.chirp.less"
+			],
+			[
+				"events/invite",
+				"Views/Events/invite.vm"
+			],
+			[
+				"widgetfindplaces",
+				"Views/Home/_widgetFindPlaces.vm"
+			],
+			[
+				"modules/index",
+				"Views/Admin/Modules/index.vm"
+			],
+			[
+				"admin/pages/index",
+				"Views/Admin/Pages/index.vm"
+			],
+			[
+				"discussion",
+				"Content/css-view/view.discussion.less"
+			],
+			[
+				"members/_last",
+				"Views/Members/_listLastOnline.vm"
+			],
+			[
+				"grids",
+				"Views/Sandbox/Grids.vm"
+			],
+			[
+				"templateformatting",
+				"Content/css-templates/formatting.chirp.less"
+			],
+			[
+				"popupless",
+				"Content/css-templates/popups.chirp.less"
+			],
+			[
+				"admin/modules/",
+				"Views/Admin/Modules/index.vm"
+			],
+			[
+				"pages/_types",
+				"Views/Admin/Pages/_types.vm"
+			],
+			[
+				"templates/index",
+				"Views/Admin/Templates/index.vm"
+			],
+			[
+				"normalize",
+				"Content/css-normalize/normalize.chirp.less"
+			],
+			[
+				"templates/grid",
+				"Content/css-templates/grid.chirp.less"
+			],
+			[
+				"admin/pages",
+				"Views/Admin/Pages/index.vm"
+			],
+			[
+				"admin/logo",
+				"Views/Admin/Appearance/Logo/edit.vm"
+			],
+			[
+				"/admin/app",
+				"Controllers/Admin/Appearance/LogoController.cs"
+			],
+			[
+				"_listlastmembers",
+				"Views/Members/_listLastMembers.vm"
+			],
+			[
+				"lastmembers",
+				"Views/Members/lastmembers.vm"
+			],
+			[
+				"members.js",
+				"javascript/applaunch.view.members.js"
+			],
+			[
+				"grid.less",
+				"Content/css-templates/grid.chirp.less"
+			],
+			[
+				"admin/page",
+				"Views/Admin/Pages/index.vm"
+			],
+			[
+				"admin/menus",
+				"Views/Admin/Menus/_menuitem.vm"
+			],
+			[
+				"topbar",
+				"Content/css-shared/shared.topbar.less"
+			],
+			[
+				"members/_",
+				"Views/Members/_listLastArtists.vm"
+			],
+			[
+				"gridcomponent",
+				"Components/GridComponent.cs"
+			],
+			[
+				"admin/page/index",
+				"Views/Admin/Pages/index.vm"
+			],
+			[
+				"ismoderator",
+				"Components/IsModeratorBlock.cs"
+			],
+			[
+				"profile/profil",
+				"Views/Profile/profile.vm"
+			],
+			[
+				"navigation-menu",
+				"Scripts/admin/navigation-menu.js"
+			],
+			[
+				"_big",
+				"Views/Home/_BigHeader.vm"
+			],
+			[
+				"_bigheader",
+				"Views/Home/_aeWidgetBigHeader.vm"
+			],
+			[
+				"footercomp",
+				"Views/components/FooterComponent/default.vm"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 202.0,
+	"status_bar_visible": true
+}
