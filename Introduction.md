@@ -88,7 +88,7 @@ You meet with software engineers at your company, and everyone has agreed that $
 
 You could embed the following VTL statement in the web page:
 
-´´´html
+```html
 <html>
 <body>
 Hello $customer.Name!
@@ -103,7 +103,7 @@ Hello $customer.Name!
    \#end
 \#end
 </table>
-´´´
+```
 
 The exact details of the foreach statement will be described in greater depth shortly; what's important is the impact this short script can have on your web site. When a customer with a penchant for Bright Red Mud logs in, and Bright Red Mud is on sale, that is what this customer will see, prominently displayed. If another customer with a long history of Terracotta Mud purchases logs in, the notice of a Terracotta Mud sale will be front and center. The flexibility of Velocity is enormous and limited only by your creativity.
 
@@ -117,17 +117,17 @@ Velocity Engine 2.x distribution has several jars, related to the Maven artifact
 
 Include the following dependency to your POM file:
 
-´´´xml
+```xml
 <dependency>
   <groupId>org.apache.velocity</groupId>
   <artifactId>velocity-engine-core</artifactId>
   <version>x.x.x</version>
 </dependency>
-´´´    
+``` 
 
 If you want to connect Velocity log facility to Commons Logging, SLF4J, Log4j or the servlet logger, choose the appropriate dependency:
 
-´´´xml
+```xml
 <dependency>
   <groupId>org.apache.velocity</groupId>
   <artifactId>velocity-engine-commons-logging</artifactId>
@@ -151,7 +151,7 @@ If you want to connect Velocity log facility to Commons Logging, SLF4J, Log4j or
   <artifactId>velocity-engine-servlet</artifactId>
   <version>x.x.x</version>
 </dependency>
-´´´
+```
     
 
 ###<a name="other-users">Other users</a>
